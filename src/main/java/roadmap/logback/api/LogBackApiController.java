@@ -11,10 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class LogBackApiController {
 
     private static final Logger roadmapConsoleLogger = LoggerFactory.getLogger("roadmapConsole");
+    private static final Logger roadmapFileLogger = LoggerFactory.getLogger("roadmapFile");
 
     @GetMapping
     public String logbackTest() {
         roadmapConsoleLogger.info("콘솔 로깅 입니다.");
+        roadmapFileLogger.info("파일 로깅 입니다.");
         return "안녕하세요";
     }
 }
